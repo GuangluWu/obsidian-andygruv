@@ -1,0 +1,1054 @@
+:root
+{
+    --dark0-hard:     #1d2021;
+    --dark0:          #282828;
+    --dark0-soft:     #32302f;
+    --dark1:          #3c3836;
+    --dark2:          #504945;
+    --dark3:          #665c54;
+    --dark4:          #7c6f64;
+
+    --gray:           #928374;
+
+    --light0-hard:    #f9f5d7;
+    --light0:         #fbf1c7;
+    --light0-soft:    #f2e5bc;
+    --light1:         #ebdbb2;
+    --light2:         #d5c4a1;
+    --light3:         #bdae93;
+    --light4:         #a89984;
+
+    --bright-red:     #fb4934;
+    --bright-green:   #b8bb26;
+    --bright-yellow:  #fabd2f;
+    --bright-blue:    #83a598;
+    --bright-purple:  #d3869b;
+    --bright-aqua:    #8ec07c;
+    --bright-orange:  #fe8019;
+
+    --neutral-red:    #cc241d;
+    --neutral-green:  #98971a;
+    --neutral-yellow: #d79921;
+    --neutral-blue:   #458588;
+    --neutral-purple: #b16286;
+    --neutral-aqua:   #689d6a;
+    --neutral-orange: #d65d0e;
+
+    --faded-red:      #9d0006;
+    --faded-green:    #79740e;
+    --faded-yellow:   #b57614;
+    --faded-blue:     #076678;
+    --faded-purple:   #8f3f71;
+    --faded-aqua:     #427b58;
+    --faded-orange:   #af3a03;
+
+    --font-size-normal:              15px;
+    --font-size-code:                13.5px;
+    --font-size-side-dock:           13px;
+    --font-size-side-dock-title:     18px;
+    --font-size-status-bar:          12px;
+    --font-size-h1:                  23px;
+    --font-size-h2:                  22px;
+    --font-size-h3:                  21px;
+    --font-size-h4:                  20px;
+    --font-size-h5:                  19px;
+    --font-size-h6:                  18px;
+    --split-min-width:              700px;
+} 
+
+.theme-dark
+{
+  --background-primary:         var(--dark0);
+  --background-primary-alt:     var(--dark1);
+  --background-primary-alt2:    var(--dark3);
+  --background-secondary:       var(--dark0-hard);
+  --background-secondary-alt:   var(--dark1);
+  --text-normal:                var(--light0);
+  --text-faint:                 var(--light3);
+  --text-title-h1:              var(--neutral-orange);
+  --text-title-h2:              var(--neutral-yellow);
+  --text-title-h3:              var(--neutral-green);
+  --text-title-h4:              var(--neutral-aqua);
+  --text-title-h5:              var(--neutral-blue);
+  --text-title-h6:              var(--neutral-purple);
+  --text-link:                  var(--bright-blue);
+  --text-a:                     var(--bright-orange);
+  --text-a-hover:               var(--bright-blue);
+  --text-mark:                  var(--faded-yellow);
+  --pre-code:                   var(--dark1);
+  --text-highlight-bg:          var(--faded-yellow);
+  --text-muted:                 var(--gray);
+  --interactive-accent:         var(--bright-orange);
+  --interactive-before:         var(--dark4);
+  --background-modifier-border: var(--dark2);
+  --blockquote-border:          var(--neutral-yellow);
+  --text-accent:                var(--bright-orange);
+  --interactive-accent-rgb:     var(--bright-orange);
+  --font-family-editor:         Avenir, Avenir Next, sans-serif;
+  --font-family-preview:        Avenir, Avenir Next, sans-serif;
+  --inline-code:                var(--bright-aqua);
+  --vim-cursor:                 var(--neutral-orange);
+}
+
+/*generally, when change dark to light mode, the color code change according to the following rules:
+dark -> light
+light -> dark
+neutral -> faded
+bright -> neutral
+gray -> gray
+*/
+.theme-light
+{
+    --background-primary:         var(--light0);
+    --background-primary-alt:     var(--light1);
+    --background-primary-alt2:    var(--light3);
+    --background-secondary:       var(--light0-hard);
+    --background-secondary-alt:   var(--light1);
+    --text-normal:                var(--dark0);
+    --text-faint:                 var(--dark3);
+    --text-title-h1:              var(--faded-red);
+    --text-title-h2:              var(--faded-orange);
+    --text-title-h3:              var(--faded-yellow);
+    --text-title-h4:              var(--faded-green);
+    --text-title-h5:              var(--faded-aqua);
+    --text-title-h6:              var(--faded-blue);
+    --text-link:                  var(--neutral-blue);
+    --text-a:                     var(--neutral-orange);
+    --text-a-hover:               var(--neutral-blue);
+    --text-mark:                  var(--neutral-yellow);
+    --pre-code:                   var(--light1);
+    --text-highlight-bg:          var(--neutral-yellow);
+    --text-muted:                 var(--gray);
+    --interactive-accent:         var(--neutral-orange);
+    --interactive-before:         var(--light4);
+    --background-modifier-border: var(--light2);
+    --blockquote-border:          var(--neutral-aqua);
+    --text-accent:                var(--neutral-orange);
+    --interactive-accent-rgb:     var(--neutral-orange);
+    --font-family-editor: Avenir, Avenir Next, sans-serif;
+    --font-family-preview: Avenir, Avenir Next, sans-serif;
+    --inline-code:                var(--neutral-blue);
+    --vim-cursor:                 var(--neutral-orange);
+}
+
+.theme-dark code[class*="language-"],
+.theme-dark pre[class*="language-"],
+.theme-light code[class*="language-"],
+.theme-light pre[class*="language-"]
+{
+    text-shadow: none !important;
+    background-color: var(--pre-code) !important;
+}
+
+
+#graph-view-canvas .links
+{
+  stroke: var(--interactive-accent-rgb) !important;
+}
+
+strong {
+  /*color: #ba946d;*/
+  font-weight: 600 !important;
+}
+
+em {
+  color: var(--text-faint);
+}
+
+mark
+{
+  background-color: var(--text-mark) !important;
+  /*padding-top: 4px;
+  padding-bottom: 1px;*/
+}
+
+
+
+/**********************/
+/* Odds and Ends */
+/**********************/
+
+/* Tag Color in PREVIEW MODE */
+a.tag {
+  color: var(--text-a) !important;
+}
+
+/* Tag Color in EDITOR MODE */
+.cm-hashtag {
+  color: var(--text-link) !important;
+  text-decoration: none !important;
+}
+
+
+/* SEARCH panel background */
+.side-dock-panels-container {
+  background-color: var(--background-secondary) !important;
+  color: var(--text-normal);
+}
+
+
+
+
+
+
+
+/**********************/
+/* links and brackets */
+/**********************/
+
+
+
+
+
+
+
+/* link */
+a,
+.internal-link,
+.cm-hmd-internal-link,
+.cm-link,
+.cm-formatting-link
+{
+  color: var(--text-a) !important;
+  text-decoration: none !important;
+  font-family: Avenir !important;
+}
+
+/* link hover color */
+a:hover,
+.internal-link:hover
+{
+  color: var(--text-a-hover) !important;
+  text-decoration: none !important;
+}
+
+/* make external links italics to differentiate */
+a:not(.internal-link) {
+  font-style: italic;
+}
+
+/* blockquote */
+.cm-quote /* for editor */
+{
+  color: var(--text-faint) !important;
+}
+
+blockquote /* for preview */
+{
+  border-color: var(--blockquote-border) !important;
+}
+
+/* icons at top of panes*/
+.file-view-actions a
+{
+  color: var(--text-muted) !important;
+}
+
+.file-view-actions a:hover
+{
+  color: var(--text-a) !important;
+}
+
+/* html tags in editor e.g <div> <ul>... */
+.cm-tag
+{
+  color: var(--inline-code) !important;
+}
+
+/* code blocks in preview */
+pre code
+{
+  padding: 6px !important;
+  line-height: normal;
+  display: block;
+  background-color: var(--pre-code) !important;
+}
+
+.markdown-preview-view pre
+{
+  padding: 0px !important;
+}
+
+/* in-line code for editor and preview and code block for editor*/
+code,
+.cm-inline-code
+{
+  background-color: var(--pre-code) !important;
+  color: var(--text-muted) !important;
+  bottom: 0px !important;
+}
+
+/* code and code blocks for preview */
+.markdown-preview-view code
+{
+  font-size: var(--font-size-code);
+}
+
+/**********/
+/* tables */
+/**********/
+th
+{
+  font-weight: 800 !important;
+}
+
+thead
+{
+  border-bottom: 3px solid var(--background-modifier-border);
+}
+
+.table
+{
+  background-color: var(--background-secondary-alt);
+  border: 1px solid var(--background-modifier-border);
+  padding: 4px;
+  line-height: normal;
+  display: block;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+/* embedded images */
+img
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* horizontal line in preview */
+.markdown-preview-view hr
+{
+  background-color: var(--text-normal);
+}
+
+
+
+
+
+/*************/
+/* checkboxes */
+/*************/
+
+
+
+/* task lists! (DEATH AU - I'm proud of this, but could use improvement) */
+.markdown-preview-view .task-list-item-checkbox {
+    -webkit-appearance: none;
+    top: 1.3px !important;
+    box-sizing: border-box;
+    border: 1px solid  var(--text-muted);
+    position: relative;
+    width: 1.25em;
+    height: 1.25em;
+    margin: 0;
+    box-shadow: 0 0 0.2em var(--text-muted);
+}
+.markdown-preview-view .task-list-item-checkbox:checked::before {
+    content: '✓';
+    position: absolute;
+    color: var(--text-accent);
+    font-size:1em;
+    line-height: 1.25em;
+    width:1.2em;
+    text-align:center;
+    text-shadow: 0 0 0.2em var(--text-accent);
+}
+
+
+
+.markdown-preview-view .task-list-item-checkbox
+{
+  top: 0px;
+}
+
+
+.checkbox-container {
+    background-color: var(--background-secondary-alt);
+    border-radius: 14px;
+    display: inline-block;
+    height: 22px;
+    position: relative;
+    top: 4px;
+    user-select: none;
+    width: 42px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15);
+    transition: background 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border 0.15s ease-in-out, opacity 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+.checkbox-container.is-enabled {
+    background-color: var(--text-accent);
+}
+
+.markdown-preview-view mark {
+    color: var(--text-normal);
+   /* background-color: #5dbcd2;*/
+    }
+
+
+
+/*************/
+/* side dock SPECIAL STUFF*/
+/*************/
+
+
+
+/*.side-dock-ribbon-tab, .side-dock-ribbon-action {
+
+}*/
+.side-dock-ribbon-tab.is-active {
+  color: var(--text-accent) !important;
+}
+.side-dock-ribbon-tab.is-active .side-dock-ribbon-tab-inner:hover {
+  color: var(--text-a) !important;
+  /*background-color: red;*/
+}
+/*
+.nav-file-title {  
+  color: #999999 !important;
+  background-color: rgb(32, 32, 36);
+  }
+
+.nav-folder-title {  
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-top-left-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+  color: #bfbfbf !important;
+  background-color: rgb(32, 32, 36);
+  }
+  
+  .nav-file-title:hover {
+  color: var(--text-a) !important;
+}
+*/
+.nav-file-tag
+{
+    color: var(--text-a) !important;
+}
+
+.is-active .nav-file-title
+{
+    color: var(--text-a) !important;
+    background-color: var(--background-secondary) !important;
+}
+
+.nav-file-title
+{
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+}
+
+/* search result in backlink or file search */
+.search-result-file-title {  
+  color: var(--text-normal) !important;
+  background-color: var(--background-secondary-alt);
+  }
+
+.search-result-file-title:hover {  
+  background-color: var(--background-primary-alt2);
+  }
+
+  /*color and background of matched text*/
+.search-result-file-matched-text {  
+  color: var(--text-a) !important;
+  background-color: var(--background-secondary);
+  }
+
+
+.nav-file-tag{ 
+  color: var(--text-a); 
+} 
+/*for the PNG text, but can't specifically target "PNG", just all of those filetype tags.*/
+.nav-file.is-active .nav-file-tag { 
+  color: var(--text-a); 
+}
+
+
+
+
+/* side dock text, like file names and backlink context */
+.side-dock-panels-container *
+{
+  font-size: var(--font-size-side-dock) !important;
+}
+
+
+
+/* side dock titles at top */
+.side-dock-title
+{
+  font-size: var(--font-size-side-dock-title) !important;
+  font-weight: 800 !important;
+  color: var(--text-normal) !important;
+
+}
+
+
+
+/* hover actions on side dock navigation */
+.side-dock-ribbon-tab:hover,
+.side-dock-ribbon-tab-inner:hover,
+.side-dock-ribbon-action:hover,
+.side-dock-ribbon-action.is-active:hover,
+.nav-action-button:hover,
+.side-dock-collapse-btn:hover
+{
+  color: var(--text-a);
+}
+
+/* condense line spacing on file explorer title list. also avoids character-level word breaks */
+.nav-file-title-content,
+.search-result-file-title,
+.search-result-file-match
+{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  line-height: normal !important;
+  word-break: keep-all;
+}
+
+/* clean up side bar empty state (e.g. unlinked mentions) */
+.search-empty-state
+{
+  width: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  line-height: normal;
+}
+
+
+
+
+
+
+/* font for everything outside of editor/preview panes */
+.app-container
+{
+  font-family: var(--font-family-preview);
+}
+
+.status-bar-item
+{
+  font-family: var(--font-family-preview);
+  font-size: var(--font-size-status-bar);
+}
+
+
+
+
+
+
+
+
+/******************/
+/* editor section */
+/******************/
+
+
+
+/* normal text outside of headings and code */
+.cm-s-obsidian
+{
+  font-family: var(--font-family-editor);
+  font-size: var(--font-size-normal);
+  /*color for normal text in editor mode*/
+  color: var(--text-normal);
+  padding-left: 1% !important;
+  padding-right: 1% !important;
+}
+
+.mod-single-child .cm-s-obsidian
+{
+  font-family: var(--font-family-editor);
+  font-size: var(--font-size-normal);
+  color: var(--text-normal);
+  padding-left: 1% !important;
+  padding-right: 1% !important;
+}
+
+/* headings */
+.cm-header-1
+{
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: var(--font-size-h1);
+  font-weight: bold;
+  color: var(--text-title-h1);
+}
+
+.cm-header-2
+{
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: var(--font-size-h2);
+  font-weight: bold;
+  color: var(--text-title-h2);
+}
+
+.cm-header-3
+{
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: var(--font-size-h3);
+  font-weight: bold;
+  color: var(--text-title-h3);
+}
+
+.cm-header-4
+{
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: var(--font-size-h4);
+  font-weight: bold;
+  color: var(--text-title-h4);
+}
+
+.cm-header-5
+{
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: var(--font-size-h5);
+  font-weight: bold;
+  color: var(--text-title-h5);
+}
+
+.cm-header-6
+{
+  font-family: var(--font-family-editor);
+  font-weight: 500;
+  font-size: var(--font-size-h6);
+  font-weight: bold;
+  color: var(--text-title-h6);
+}
+
+.cm-strong {
+  color: var(--text-normal);
+  font-weight: 700;
+}
+
+.cm-em {
+  color: var(--text-normal);
+}
+
+/* This is the dashes in bullets. Color does not work, 
+but font weight does. */
+.cm-formatting-list {
+  color: var(--text-normal);
+  font-weight: 700;
+} 
+
+.cm-formatting  /* This is the color of header hashtags. Don't change. */
+.cm-formatting-list-ul
+.cm-list-1 /* This is the color of text in lists. Don't change. */
+
+
+
+
+
+
+
+
+
+/******************/
+/* preview section */
+/******************/
+
+
+
+
+/* normal text outside of headings and code */
+.markdown-preview-view
+{
+  font-family: var(--font-family-preview);
+  font-size: var(--font-size-normal);
+  color: var(--text-normal);
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.mod-single-child .markdown-preview-view
+{
+  font-family: var(--font-family-preview);
+  font-size: var(--font-size-normal);
+  color: var(--text-normal);
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+/* headings */
+.markdown-preview-view h1
+{
+  font-family: var(--font-family-preview);
+  font-weight: 500;
+  font-size: var(--font-size-h1);
+  font-weight: bold;
+  color: var(--text-title-h1);
+}
+
+.markdown-preview-view h2
+{
+  font-family: var(--font-family-preview);
+  font-weight: 500;
+  font-size: var(--font-size-h2);
+  font-weight: bold;
+  color: var(--text-title-h2);
+}
+
+.markdown-preview-view h3
+{
+  font-family: var(--font-family-preview);
+  font-weight: 500;
+  font-size: var(--font-size-h3);
+  font-weight: bold;
+  color: var(--text-title-h3);
+}
+
+.markdown-preview-view h4
+{
+  font-family: var(--font-family-preview);
+  font-weight: 500;
+  font-size: var(--font-size-h4);
+  font-weight: bold;
+  color: var(--text-title-h4);
+}
+
+.markdown-preview-view h5
+{
+  font-family: var(--font-family-preview);
+  font-weight: 500;
+  font-size: var(--font-size-h5);
+  font-weight: bold;
+  color: var(--text-title-h5);
+}
+
+.markdown-preview-view h6
+{
+  font-family: var(--font-family-preview);
+  font-weight: 500;
+  font-size: var(--font-size-h6);
+  font-weight: bold;
+  color: var(--text-title-h6);
+}
+
+
+
+/* this code stuff isn't working for me 
+
+code
+{
+  font-family: var(--font-family-preview);
+  font-weight: 500;
+  font-size: var(--font-size-normal);
+  font-weight: none;
+  color: var(--text-title-h3);
+}
+
+.code {
+    background-color: var(--gray) !important;
+    border: 1px solid var(--background-modifier-border) !important;
+    border-color: #ba6ea0 !important;
+}
+
+*/
+
+
+
+
+/* internal embedded link rendering in preview */
+.markdown-embed-title
+{
+  font-weight: 600;
+}
+
+.markdown-embed
+{
+  padding-left: 8px !important;
+  padding-right: 4px !important;
+  margin-left: 8px !important;
+  margin-right: 4px !important;
+}
+
+
+/* normal text outside of headings and code*/ 
+.markdown-preview-view
+{
+  font-family: var(--font-family-preview);
+  font-size: var(--font-size-normal);
+  color: var(--text-normal);
+  padding-left: 2% !important;
+  padding-right: 1% !important;
+}
+
+
+
+/* remove secondary scroll bar in editor that comes from adding variable padding */
+.CodeMirror-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+/* internal embedded link rendering in preview */
+.markdown-embed-title
+{
+  font-weight: 600;
+}
+
+.markdown-embed
+{
+  padding-left: 8px !important;
+  padding-right: 4px !important;
+  margin-left: 8px !important;
+  margin-right: 4px !important;
+}
+
+/* clean up side bar empty state (e.g. unlinked mentions) */
+.search-empty-state
+{
+  width: auto;
+  padding-left: 10px;
+  padding-right: 5px;
+  line-height: normal;
+}
+
+/* remote secondary scroll bar in editor that comes from adding variable padding */
+.CodeMirror-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* to have sidebar hide and then reveal on hover*/
+.app-container.is-left-sidedock-collapsed .side-dock.mod-left:not(:hover), .app-container.is-right-sidedock-collapsed .side-dock.mod-right:not(:hover) {
+  width: 0px !important;
+}
+
+/* css for the setting section*/
+
+.mod-cta a
+{
+    color: var(--text-normal) !important;
+    font-weight: 600 !important;
+}
+
+.mod-cta:hover
+{
+    background-color: var(--interactive-before) !important;
+    font-weight: 600 !important;
+}
+
+.CodeMirror pre.CodeMirror-line
+{
+    z-index: auto !important;
+}
+
+.CodeMirror-cursor
+{
+    background-color: var(--vim-cursor) !important;
+    opacity: 60% !important;
+}
+
+
+/******************/
+/* Editor Code Appearance - */
+/******************/
+
+.CodeMirror-code span.cm-inline-code {     
+  background-color: var(--pre-code);  
+  color: var(--inline-code) !important;
+  font-weight: 500;
+}
+
+
+
+    /******************/
+    /* Editor Code - from death-au */
+    /* i think this just adds a border to inline code in editor mode */
+    /******************/
+
+
+.cm-s-obsidian span.cm-inline-code {
+  /*border: 1px solid #605a52;*/
+  border-radius: 4px;
+}
+.cm-s-obsidian span.cm-formatting-code.cm-inline-code {
+  border-right-width: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.cm-s-obsidian span.cm-formatting-code.cm-inline-code + span.cm-inline-code {
+  border-right: none;
+  border-left: none;
+  border-radius: 0;
+}
+
+.cm-s-obsidian span.cm-formatting-code.cm-inline-code + span.cm-inline-code + span.cm-formatting-code.cm-inline-code {
+  border-left-width: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-right-width: 1px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+
+/* Editor CodeBlock TEXT Appearance - */
+.cm-s-obsidian pre.HyperMD-codeblock {
+  background-color: var(--pre-code);     
+  color: var(--inline-code) !important;
+  font-weight: 500;
+}
+
+
+
+/******************/
+/* Preview Code Appearance */
+/******************/
+
+.markdown-preview-view code {
+color: var(--code-block) !important;
+background-color: var(--pre-code) !important;
+bottom: -0.1px !important;
+}
+
+
+/******************/
+/* Naked Embeds - But I'm keeping Border and Scroll! */
+/******************/
+.markdown-embed-title { display:none; }
+.markdown-preview-view .markdown-embed-content>:first-child { margin-top: 0; }
+.markdown-preview-view .markdown-embed-content>:last-child { margin-bottom: 0; }
+
+
+.markdown-embed-link {
+color: var(--text-a) !important;
+right: 2px !important;
+}
+
+.markdown-embed-link:hover {
+color: var(--text-a-hover) !important;
+}
+
+
+/******************/
+/* graph-view */
+/******************/
+
+.graph-view.color-circle,
+.graph-view.color-fill-highlight,
+.graph-view.color-line-highlight
+{
+    color: var(--interactive-accent-rgb) !important;
+}
+.graph-view.color-text
+{
+    color: var(--text-a-hover) !important;
+}
+
+/******************/
+/* Andy Matuschak mode! V2! */
+/******************/
+
+
+
+
+
+
+.workspace-split.mod-vertical { overflow-x:auto; }
+.workspace-leaf, .workspace-split > .workspace-split { min-width: var(--split-min-width); min-height: 500px; }
+.workspace-split.mod-horizontal { overflow-y: auto; }
+
+.workspace-split.mod-vertical > * {
+    flex-direction: row;
+    display: flex;
+    /*box-shadow: 0px 0px 5px 5px var(--background-secondary);*/
+}
+
+.workspace-leaf {
+    position: sticky;
+    --stick-left: 35px; /*40px for full text*/
+    left:0;
+}
+
+.workspace-leaf:nth-child(10n-8) { left: calc(var(--stick-left) * 0); }
+.workspace-leaf:nth-child(10n-7) { left: calc(var(--stick-left) * 1); }
+.workspace-leaf:nth-child(10n-6) { left: calc(var(--stick-left) * 2); }
+.workspace-leaf:nth-child(10n-5) { left: calc(var(--stick-left) * 3); }
+.workspace-leaf:nth-child(10n-4) { left: calc(var(--stick-left) * 4); }
+.workspace-leaf:nth-child(10n-3) { left: calc(var(--stick-left) * 5); }
+.workspace-leaf:nth-child(10n-2) { left: calc(var(--stick-left) * 6); }
+.workspace-leaf:nth-child(10n-1) { left: calc(var(--stick-left) * 7); }
+.workspace-leaf:nth-child(10n+0) { left: calc(var(--stick-left) * 8); }
+.workspace-leaf:nth-child(10n+1) { left: calc(var(--stick-left) * 9); }
+
+.workspace-leaf-content {
+    display: flex;
+    padding-right: 0;
+}
+
+.view-header {
+    writing-mode: vertical-lr;
+    border-right: 1px solid var(--background-secondary-alt);
+    border-left: 1px solid var(--background-secondary-alt);
+    border-top: none;
+    border-bottom: none;
+    height: auto;
+    background-color: var(--background-primary);
+}
+
+.view-header-title-container {
+    width: 30px;
+    height: unset;
+    padding-left: unset;
+    padding-top: 20px;
+}
+
+.workspace-leaf.mod-active .view-header {
+    border-right: 2px solid var(--interactive-accent);
+    border-left: 0px;
+    border-bottom: none;
+}
+
+.view-actions {
+    padding: 10px 5px;
+}
+
+.view-header-title-container:after {
+    width: 100%;
+    height: 30px;
+    top:unset;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent, var(--background-primary));
+}
+
+.workspace-leaf.mod-active .view-header-title-container:after {
+    background: linear-gradient(to bottom, transparent, var(--background-secondary));
+}
+
+/* buttons in the header*/
+.view-action {
+    margin: 8px 0;
+    top: 0;
+    color: var(--text-faint) !important;
+}
+
+.view-action:hover {
+  color: var(--text-accent) !important;
+}
+
+/* set the background of graph view to be not transparent*/
+.view-content {
+    height: 100%;
+    background-color: var(--background-primary);
+}
+
+.workspace-leaf.mod-active .view-header {
+    clip-path: polygon(0 20px, 20px 0, 100% 0, 100% 100%, 0 100%);
+    background-color: var(--background-secondary);
+}
+
+
