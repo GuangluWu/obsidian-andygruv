@@ -54,6 +54,7 @@
     --font-size-h5:                  19px;
     --font-size-h6:                  18px;
     --split-min-width:              700px;
+    --view-max-width:               730px;
 } 
 
 .theme-dark
@@ -88,6 +89,7 @@
   --font-family-preview:        Avenir, Avenir Next, sans-serif;
   --inline-code:                var(--bright-aqua);
   --vim-cursor:                 var(--neutral-orange);
+  --box-shadow:                 var(--dark0-hard);
 }
 
 /*generally, when change dark to light mode, the color code change according to the following rules:
@@ -129,6 +131,7 @@ gray -> gray
     --font-family-preview: Avenir, Avenir Next, sans-serif;
     --inline-code:                var(--neutral-blue);
     --vim-cursor:                 var(--neutral-orange);
+    --box-shadow:                 var(--light0-soft);
 }
 
 .theme-dark code[class*="language-"],
@@ -189,15 +192,9 @@ a.tag {
 
 
 
-
-
-
 /**********************/
 /* links and brackets */
 /**********************/
-
-
-
 
 
 
@@ -283,6 +280,12 @@ code,
 {
   font-size: var(--font-size-code);
 }
+
+
+
+
+
+
 
 /**********/
 /* tables */
@@ -549,6 +552,40 @@ img
 /* editor section */
 /******************/
 
+/* centralise the content
+.markdown-source-view, .markdown-preview-view {
+max-width: var(--view-max-width);
+margin: auto; 
+}*/
+
+.CodeMirror-lines, .markdown-preview-view{
+   max-width: var(--view-max-width);
+   margin: auto; 
+}
+
+/********** define scrollar ***********/
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.markdown-preview-view::-webkit-scrollbar, 
+.workspace-leaf-content::-webkit-scrollbar, 
+.search-result-container::-webkit-scrollbar,
+.nav-files-container::-webkit-scrollbar,
+.tag-pane-tags::-webkit-scrollbar{
+    display: none;
+}
+.CodeMirror-vscrollbar{
+  display: none !important;
+}
+
+
+/* Hide scrollbar for IE and Edge 
+.markdown-preview-view, .workspace-leaf-content, .search-result-container{
+    -ms-overflow-style: none;
+}
+
+*/
+
+/**************************************/
 
 
 /* normal text outside of headings and code */
@@ -560,6 +597,7 @@ img
   color: var(--text-normal);
   padding-left: 1% !important;
   padding-right: 1% !important;
+ 
 }
 
 .mod-single-child .cm-s-obsidian
@@ -786,12 +824,6 @@ code
 
 
 
-/* remove secondary scroll bar in editor that comes from adding variable padding */
-.CodeMirror-scroll::-webkit-scrollbar {
-    display: none;
-}
-
-
 
 /* internal embedded link rendering in preview */
 .markdown-embed-title
@@ -816,10 +848,7 @@ code
   line-height: normal;
 }
 
-/* remote secondary scroll bar in editor that comes from adding variable padding */
-.CodeMirror-scroll::-webkit-scrollbar {
-    display: none;
-}
+
 
 /* to have sidebar hide and then reveal on hover*/
 .app-container.is-left-sidedock-collapsed .side-dock.mod-left:not(:hover), .app-container.is-right-sidedock-collapsed .side-dock.mod-right:not(:hover) {
@@ -828,10 +857,11 @@ code
 
 /* css for the setting section*/
 
-.mod-cta a
+.mod-cta, .mod-cta a
 {
     color: var(--text-normal) !important;
     font-weight: 600 !important;
+    font-style: normal;
 }
 
 .mod-cta:hover
@@ -855,6 +885,7 @@ code
 /******************/
 /* Editor Code Appearance - */
 /******************/
+
 
 .CodeMirror-code span.cm-inline-code {     
   background-color: var(--pre-code);  
@@ -959,13 +990,13 @@ color: var(--text-a-hover) !important;
 
 
 .workspace-split.mod-vertical { overflow-x:auto; }
-.workspace-leaf, .workspace-split > .workspace-split { min-width: var(--split-min-width); min-height: 500px; }
+.workspace-leaf, .workspace-split > .workspace-split { min-width: var(--split-min-width); min-height: 100%; }
 .workspace-split.mod-horizontal { overflow-y: auto; }
 
 .workspace-split.mod-vertical > * {
     flex-direction: row;
     display: flex;
-    /*box-shadow: 0px 0px 5px 5px var(--background-secondary);*/
+    box-shadow: 0px 0px 5px 5px var(--box-shadow);
 }
 
 .workspace-leaf {
@@ -988,6 +1019,10 @@ color: var(--text-a-hover) !important;
 .workspace-leaf-content {
     display: flex;
     padding-right: 0;
+}
+
+.workspace-leaf-resize-handle, .side-dock-resize-handle{
+  width: 1px !important;
 }
 
 .view-header {
