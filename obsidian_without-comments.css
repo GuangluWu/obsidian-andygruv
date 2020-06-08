@@ -129,18 +129,6 @@
     --code-block:                 var(--neutral-blue);
 }
 
-/*generally, when change dark to light mode, the color code change according to the following rules:
-       dark -> light
-      light -> dark
-    neutral -> faded
-     bright -> neutral
-       gray -> gray      */
-
-/**************************************/
-/* basic format in EDITOR and PREVIEW */
-/**************************************/
-
-/* normal text outside of headings and code of editor */
 .cm-s-obsidian, .mod-single-child .cm-s-obsidian {
   font-family: var(--font-family-editor);
   font-size: var(--font-size-normal);
@@ -149,7 +137,6 @@
   padding-right: 1% !important;
 }
 
-/* normal text outside of headings and code of preview */
 .markdown-preview-view, .mod-single-child .markdown-preview-view {
   font-family: var(--font-family-preview);
   font-size: var(--font-size-normal);
@@ -158,24 +145,20 @@
   padding-right: 1% !important;
 }
 
-/* bold in preview and editor */
 strong, .cm-strong {
   color: var(--text-normal) !important;
   font-weight: 600;
 }
 
-/* emphasis in preview and editor */
 em, .cm-em {
   color: var(--text-faint);
   font-style: italic;
 }
 
-/* strikethrough in preview and editor */
 s, .cm-strikethrough {
   color: var(--text-faint);
 }
 
-/* highlight in preview and editor */
 mark, .cm-highlight {
   background-color: var(--text-mark);
   padding-top: 0px;
@@ -184,37 +167,24 @@ mark, .cm-highlight {
   padding-right: 2px;
 }
 
-/* list in editor */
 .cm-s-obsidian span.cm-formatting-list {
   color: var(--text-normal) !important;
 }
 
-/* horizontal line in preview */
 .markdown-preview-view hr {
   background-color: var(--text-faint) !important;
 }
 
-/*********************************/
-/*             image             */
-/*********************************/
-
-/* embedded images */
 img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-/* img hover zoom out img*/
 img:hover {
   transform: scale(1.04);
   transition: transform 0.25s ease-in-out 0s;
 }
 
-/*********************************/
-/*             link              */
-/*********************************/
-
-/* link */
 a,
 .internal-link,
 .cm-hmd-internal-link,
@@ -226,28 +196,20 @@ a,
   font-family: Avenir !important;
 }
 
-/* the url string in editor */
 .cm-s-obsidian span.cm-string{
   color: var(--inline-code) !important;
 }
 
-/* link hover color */
 a:hover,
 .internal-link:hover {
   color: var(--text-a-hover) !important;
   text-decoration: none !important;
 }
 
-/* make external links italics to differentiate */
 a:not(.internal-link) {
   font-style: italic;
 }
 
-/*********************************/
-/* Headings - EDITOR and PREVIEW */
-/*********************************/
-
-/* headings for editor and preview */
 .cm-header-1, .markdown-preview-view h1
 {
   font-family: var(--font-family-editor);
@@ -302,11 +264,6 @@ a:not(.internal-link) {
   color: var(--text-title-h6);
 }
 
-/***************************************/
-/*         Code block in  Preview      */
-/***************************************/
-
-/* code blocks in preview */
 pre code {
   font-family: monaco !important;
   font-size: var(--font-size-code) !important;
@@ -316,25 +273,21 @@ pre code {
   color: var(--code-block)  !important;
 }
 
-/* padding of code blocks in preview */
 .markdown-preview-view pre {
   padding: 0px !important;
 }
 
-/* font-size of in-line block for preview */
 .markdown-preview-view code
 {
   font-size: var(--font-size-code);
 }
 
-/* in-line block for preview */
 code{
   background-color: var(--pre-code) !important;
   color: var(--inline-code) !important;
   bottom: 0px !important;
 }
 
-/* remove the shadow that typically affect light mode */
 .theme-dark code[class*="language-"],
 .theme-dark pre[class*="language-"],
 .theme-light code[class*="language-"],
@@ -344,18 +297,12 @@ code{
     color: var(--text-faint) !important;
 }
 
-/***************************************/
-/*       Code block in Editor          */
-/***************************************/
-
-/* in-line block for editor */
 .cm-inline-code {
   background-color: var(--pre-code) !important;
   color: var(--inline-code) !important;
   bottom: 0px !important;
 }
 
- /* Editor CodeBlock TEXT Appearance */
 .cm-s-obsidian pre.HyperMD-codeblock {
   font-family: monaco !important;
   font-size: var(--font-size-code) !important;
@@ -366,28 +313,17 @@ code{
   font-weight: 500;
 }
 
-/***************************************/
-/*                Cursor               */
-/***************************************/
-
-/* Cursor on the top of text */
 .CodeMirror pre.CodeMirror-line
 {
     z-index: auto !important;
 }
 
-/* Cursor color and opacity */
 .CodeMirror-cursor
 {
     background-color: var(--vim-cursor) !important;
     opacity: 60% !important;
 }
 
-/***************************************/
-/*             Hide Scrollbar          */
-/***************************************/
-
-/* Hide scrollbar in preview, search, file, tag, back links */
 .markdown-preview-view::-webkit-scrollbar, 
 .workspace-leaf-content::-webkit-scrollbar, 
 .search-result-container::-webkit-scrollbar,
@@ -395,38 +331,23 @@ code{
 .tag-pane-tags::-webkit-scrollbar {
     display: none;
 }
-/* Hide scrollbar for editor*/
 .CodeMirror-vscrollbar {
   display: none !important;
 }
-
-/***************************************/
-/*         centralize content          */
-/***************************************/
 
 .CodeMirror-lines, .markdown-preview-view{
   max-width: var(--view-max-width);
   margin: auto; 
 }
 
-/***************************************/
-/*              Brackets               */
-/***************************************/
-
 .cm-s-obsidian span.cm-formatting-link {
   color: var(--text-a) !important;
 }
 
-/***************************************/
-/*             Blockquote              */
-/***************************************/
-
-/* for editor */
 .cm-quote {
   color: var(--text-faint) !important;
 }
 
-/* for preview */
 .markdown-preview-view blockquote {
   background-color: var(--background-primary-alt);
   border: 0px solid;
@@ -437,30 +358,19 @@ code{
   margin: 0 10px;
 }
 
-/***************************************/
-/*  tag in editor and preview          */
-/***************************************/
-
-/* Tag in preview */
 a.tag {
   color: var(--text-link) !important;
   font-style: normal !important;
 }
 
-/* Tag hover in preview */
 a.tag:hover {
   color: var(--text-a) !important;
 }
 
-/* Tag Color in editor */
 .cm-hashtag {
   color: var(--text-link) !important;
   text-decoration: none !important;
 }
-
-/***************************************/
-/*             table                   */
-/***************************************/
 
 th {
   font-weight: 800 !important;
@@ -481,10 +391,6 @@ thead {
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px;
 }
-
-/***************************************/
-/*               Checkbox              */
-/***************************************/
 
 .markdown-preview-view .task-list-item-checkbox:checked::before {
   content: '✓';
@@ -510,48 +416,24 @@ thead {
   box-shadow: 0 0 0.1em var(--text-muted);
 }
 
-/***************************************/
-/*           html in editor            */
-/***************************************/
-
-/* html tags in editor */
 .cm-s-obsidian span.cm-tag {
   color: var(--inline-code) !important;
 }
 
-/* html attribute and string in editor */
 .cm-s-obsidian span.cm-attribute {
   color: var(--text-normal) !important;
 }
 
-/* html comments in editor */
 .cm-s-obsidian span.cm-comment {
   color: var(--text-faint) !important;
 }
 
-/***************************************/
-/* internal embedded link in preview   */
-/***************************************/
-
-/* Naked Embeds */
 .markdown-embed-title { display: none; }
 .markdown-preview-view .markdown-embed-content>:first-child { margin-top: 0; }
 .markdown-preview-view .markdown-embed-content>:last-child { margin-bottom: 0; }
-/*remove the following two line, you will get border and scroll*/
 .markdown-preview-view .markdown-embed { border:none; padding:0; margin:0; }
 .markdown-preview-view .markdown-embed-content { max-height: unset;}
 
-/* 
-.markdown-embed
-{
-  padding-left: 8px !important;
-  padding-right: 4px !important;
-  margin-left: 8px !important;
-  margin-right: 4px !important;
-}
-*/
-
-/* the link on the top right corner*/
 .markdown-embed-link {
 color: var(--text-a) !important;
 }
@@ -559,10 +441,6 @@ color: var(--text-a) !important;
 .markdown-embed-link:hover {
 color: var(--text-a-hover) !important;
 }
-
-/***************************************/
-/*             graph view              */
-/***************************************/
 
 .graph-view.color-circle,
 .graph-view.color-fill-highlight,
@@ -575,15 +453,10 @@ color: var(--text-a-hover) !important;
     color: var(--text-a-hover) !important;
 }
 
-/* set the background of graph view to be not transparent*/
 .view-content {
   height: 100%;
   background-color: var(--background-primary);
 }
-
-/**************************************/
-/*            Status bar              */
-/**************************************/
 
 .status-bar-item
 {
@@ -591,11 +464,6 @@ color: var(--text-a-hover) !important;
   font-size: var(--font-size-status-bar);
 }
 
-/**************************************/
-/*            Setting                 */
-/**************************************/
-
-/* texts in settings: account and daily note */
 .u-pop {
   color: var(--text-accent);
 }
@@ -616,15 +484,10 @@ color: var(--text-a-hover) !important;
   font-family: var(--font-family-preview);
 }
 
-/**************************************/
-/*            Side dock               */
-/**************************************/
-
 .side-dock-ribbon-tab.is-active {
   color: var(--text-accent) !important;
 }
 
-/* hover actions on side dock navigation */
 .side-dock-ribbon-tab:hover,
 .side-dock-ribbon-tab-inner:hover,
 .side-dock-ribbon-action:hover,
@@ -634,39 +497,29 @@ color: var(--text-a-hover) !important;
   color: var(--text-a);
 }
 
-/* to have sidebar hide and then reveal on hover */
 .app-container.is-left-sidedock-collapsed .side-dock.mod-left:not(:hover), .app-container.is-right-sidedock-collapsed .side-dock.mod-right:not(:hover) {
   width: 0px !important;
 }
 
-/***************************************/
-/* Side panel - File Explorer heading  */
-/***************************************/
-
-/* side dock text, e.g. file names and backlink context */
 .side-dock-panels-container * {
   font-size: var(--font-size-side-dock) !important;
 }
 
-/* side dock titles at top */
 .side-dock-title {
   font-size: var(--font-size-side-dock-title) !important;
   font-weight: 500 !important;
   color: var(--text-normal) !important;
 }
 
-/* SEARCH panel background */
 .side-dock-panels-container {
   background-color: var(--background-secondary) !important;
   color: var(--text-normal);
 }
 
-/* file type tag for attachments*/
 .nav-file-tag {
     color: var(--text-a) !important;
 }
 
-/* opened files */
 .is-active .nav-file-title {
   color: var(--text-a) !important;
   background-color: var(--background-secondary) !important;
@@ -679,11 +532,6 @@ color: var(--text-a-hover) !important;
     border-top-right-radius: 0 !important;
 }
 
-/***************************************/
-/* Side panel -  search and backlink   */
-/***************************************/
-
-/* search result in backlink or file search */
 .search-result-file-title {  
   color: var(--text-normal) !important;
   background-color: var(--background-secondary-alt);
@@ -693,7 +541,6 @@ color: var(--text-a-hover) !important;
   background-color: var(--background-primary-alt2);
   }
 
-/*color and background of matched text*/
 .search-result-file-matched-text {  
   color: var(--text-a) !important;
   background-color: var(--background-secondary);
@@ -703,7 +550,6 @@ color: var(--text-a-hover) !important;
   color: var(--text-faint);
 }
 
-/* condense line spacing on file explorer title list. also avoids character-level word breaks */
 .nav-file-title-content,
 .search-result-file-title,
 .search-result-file-match {
@@ -713,17 +559,12 @@ color: var(--text-a-hover) !important;
   word-break: keep-all;
 }
 
-/* clean up side bar empty state (e.g. unlinked mentions) */
 .search-empty-state {
   width: auto;
   padding-left: 10px;
   padding-right: 5px;
   line-height: normal;
 }
-
-/***************************************/
-/*     Andy Matuschak mode! V2!        */
-/***************************************/
 
 .workspace-split.mod-vertical { overflow-x:auto; }
 .workspace-leaf, .workspace-split > .workspace-split { min-width: var(--split-min-width); min-height: 100%; }
@@ -800,7 +641,6 @@ color: var(--text-a-hover) !important;
     background: linear-gradient(to bottom, transparent, var(--background-secondary));
 }
 
-/* buttons in the header*/
 .view-action {
     margin: 8px 0;
     top: 0;
