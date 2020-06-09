@@ -95,8 +95,8 @@
 
 .theme-light
 {
-    --background-primary:         var(--light0);
-    --background-primary-alt:     var(--light1);
+    --background-primary:         var(--light1);
+    --background-primary-alt:     var(--light2);
     --background-primary-alt2:    var(--light3);
     --background-secondary:       var(--light0-hard);
     --background-secondary-alt:   var(--light1);
@@ -112,7 +112,7 @@
     --text-a:                     var(--neutral-orange);
     --text-a-hover:               var(--neutral-blue);
     --text-mark:                  var(--neutral-yellow);
-    --pre-code:                   var(--light1);
+    --pre-code:                   var(--light2);
     --text-highlight-bg:          var(--neutral-yellow);
     --text-muted:                 var(--gray);
     --interactive-accent:         var(--neutral-orange);
@@ -464,6 +464,11 @@ a.tag:hover {
 
 th {
   font-weight: 800 !important;
+}
+
+.markdown-preview-view th {
+    font-weight: 800;
+    background-color: var(--background-secondary-alt) !important;
 }
 
 thead {
