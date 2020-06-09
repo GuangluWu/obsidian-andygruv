@@ -404,7 +404,7 @@ code{
 /*         centralize content          */
 /***************************************/
 
-.CodeMirror-lines, .markdown-preview-view{
+.markdown-source-view, .markdown-preview-view{
   max-width: var(--view-max-width);
   margin: auto; 
 }

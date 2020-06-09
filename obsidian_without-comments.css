@@ -335,7 +335,7 @@ code{
   display: none !important;
 }
 
-.CodeMirror-lines, .markdown-preview-view{
+.markdown-sourse-view, .markdown-preview-view{
   max-width: var(--view-max-width);
   margin: auto; 
 }
