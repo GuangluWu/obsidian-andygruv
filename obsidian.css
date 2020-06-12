@@ -47,9 +47,9 @@
   --interactive-accent: #fe8019;
   --interactive-accent-rgb: 123, 108, 217;
   --interactive-accent-hover: #fe8019;
-  --scrollbar-active-thumb-bg: rgba(0, 0, 0, 0.2);
+  --scrollbar-active-thumb-bg: rgba(0, 0, 0, 0.4);
   --scrollbar-bg: rgba(0, 0, 0, 0.05);
-  --scrollbar-thumb-bg: rgba(0, 0, 0, 0.1);
+  --scrollbar-thumb-bg: rgba(0, 0, 0, 0.3);
 
   --text-title-h1:              #d65d0e;
   --text-title-h2:              #d79921;
@@ -168,6 +168,7 @@ a:not(.internal-link) {
 .cm-s-obsidian span.cm-footref {
   color: var(--text-accent) !important; 
 }
+
 
 /***************************************/
 /*             Hide Scrollbar          */
@@ -488,7 +489,7 @@ thead {
 }
 
 /***************************************/
-/*      notice and popover             */
+/*              popover                */
 /***************************************/
 
 .popover{
@@ -620,8 +621,7 @@ color: var(--text-accent-hover) !important;
 }
 
 .workspace-leaf.mod-active .view-header-title,
-.workspace-leaf.mod-active .view-header-icon,
-.workspace-leaf.mod-active .view-action
+.workspace-leaf.mod-active .view-header-icon
 {
   color: var(--background-modifier-border);
 }
@@ -710,7 +710,6 @@ color: var(--text-accent-hover) !important;
   border-bottom: none;
 }
 
-
 /* swap the padding/margin around for the header and actions icons */
 .theme-dark .view-header-icon, .theme-dark .view-actions {
   padding: 10px 5px;
@@ -740,7 +739,9 @@ color: var(--text-accent-hover) !important;
 }
 
 /*disable the scrollbar*/
+/*
 .theme-dark .horizontal-main-container ::-webkit-scrollbar{
   display: none !important;
 }
+*/
 
