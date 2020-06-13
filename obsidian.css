@@ -40,11 +40,11 @@
   --text-highlight-bg: #b57614;
   --text-error: #800000;
   --text-error-hover: #990000;
-  --text-selection: #8f3f71;
+  --text-selection: rgba(65, 83, 88, 0.99); /* Chromium precess this color with alpha channel */
   --text-on-accent: #fbf1c7;
   --interactive-normal: #b57614;
   --interactive-hover: #fe8019;
-  --interactive-accent: #fe8019;
+  --interactive-accent: #b57614;
   --interactive-accent-rgb: 123, 108, 217;
   --interactive-accent-hover: #fe8019;
   --scrollbar-active-thumb-bg: rgba(0, 0, 0, 0.5);
@@ -60,15 +60,9 @@
   --inline-code:                #83a598;
   --code-block:                 #83a598;
   --pre-code:                   #3c3836;
-  --blockquote-border:          #fe8019;
+  --blockquote-border:          #b57614;
   --vim-cursor:                 #d65d0e;
   --border-color:               #504945;
-}
-
-
-/* font for everything outside of editor/preview panes */
-.app-container {
-  font-family: var(--font-family-preview);
 }
 
 /***************************************/
@@ -185,6 +179,16 @@ a:not(.internal-link) {
 /**************************************/
 /* basic format in EDITOR and PREVIEW */
 /**************************************/
+
+/* font for everything outside of editor/preview panes */
+.app-container {
+  font-family: var(--font-family-preview);
+}
+
+/* set the text selection color for preview mode */
+::selection {
+  background-color: var(--text-selection);
+} 
 
 /* normal text outside of headings and code of editor */
 .cm-s-obsidian, .mod-single-child .cm-s-obsidian {
@@ -528,8 +532,11 @@ thead {
 .markdown-preview-view .markdown-embed-content>:last-child { margin-bottom: 0; }
 /*remove the following two line, you will get border and scroll*/
 .markdown-preview-view .markdown-embed { border:none; padding:0; margin:0; }
-.markdown-preview-view .markdown-embed-content { max-height: unset;}
-
+.markdown-preview-view .markdown-embed-content 
+{ 
+  max-height: unset;
+  background-color: var(--background-secondary);
+}
 /* the link on the top right corner*/
 .markdown-embed-link {
 color: var(--text-accent) !important;
@@ -719,6 +726,27 @@ color: var(--text-accent-hover) !important;
   padding-right: 2% !important;
 }
 
+/***************************************/
+/*    at a rule line before ul list     */
+/***************************************/
+
+ul ul { position: relative; }
+ul ul::before {
+  content:'';
+  border-left: 1px solid var(--border-color);
+  position: absolute;
+}
+ul ul::before { left: -1em; top: 0; bottom: 0; }
+/*
+.cm-hmd-list-indent .cm-tab, ul ul { position: relative; }
+.cm-hmd-list-indent .cm-tab::before, ul ul::before {
+  content:'';
+  border-left: 1px solid var(--border-color);
+  position: absolute;
+}
+.cm-hmd-list-indent .cm-tab::before { left: 0.5em; top: -5px; bottom: -4px; }
+ul ul::before { left: -1em; top: 0; bottom: 0; }
+*/
 
 /***************************************/
 /*  Hide Scrollbar (recommend for mac)  */
