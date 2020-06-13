@@ -7,7 +7,7 @@ This is an [obsidian](https://obsidian.md/) theme combined and modified from two
 - Using the color scheme of [gruvbox](https://github.com/morhetz/gruvbox).
 - [Andy_Matuschak mode](https://notes.andymatuschak.org) with notes stacked unlimited along the horizontal direction.
 - Minimise the spare and useless space between notes.
-- Most of the scrollbars are hidden.
+- ~~Most of the scrollbars are hidden~~ If you use mac, I would reccommend to remove scrollbar by activated the code in the end of css.
 - Add a non-transparent background to the graphview mode, so that it won't be distracted from the layer below.
 - Compatible to v0.7.1
 - Dark mode == Andy mode; Light mode == Normal dark mode
