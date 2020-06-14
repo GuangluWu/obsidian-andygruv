@@ -245,6 +245,9 @@ img:hover {
   transition: transform 0.25s ease-in-out 0s;
 }
 
+.community-theme img:hover{
+  transform: none;
+}
 /*********************************/
 /* Headings - EDITOR and PREVIEW */
 /*********************************/
@@ -737,7 +740,11 @@ ul ul::before {
   position: absolute;
 }
 ul ul::before { left: -1em; top: 0; bottom: 0; }
-/*
+
+/* rule line when there are checkboxes*/
+ul .task-list-item ul::before {left: 0.15em !important}
+
+/* no good idea yet
 .cm-hmd-list-indent .cm-tab, ul ul { position: relative; }
 .cm-hmd-list-indent .cm-tab::before, ul ul::before {
   content:'';
